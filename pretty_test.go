@@ -17,5 +17,6 @@ func TestPretty(t *testing.T) {
 			"a": "b",
 		},
 	}
+	fmt.Print(Print(s))
 	fmt.Print(Sprint(s))
 }

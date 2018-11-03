@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func Print(v interface{}) string {
+func Print(v interface{}) (int, error) {
 	return fmt.Println(Sprint(v))
 }
 
