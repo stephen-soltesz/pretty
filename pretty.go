@@ -5,6 +5,10 @@ import (
 	"fmt"
 )
 
+func Print(v interface{}) string {
+	return fmt.Println(Sprint(v))
+}
+
 func Sprint(v interface{}) string {
 	d, err := json.MarshalIndent(v, "", "    ")
 	if err != nil {
