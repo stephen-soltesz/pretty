@@ -17,3 +17,12 @@ func Sprint(v interface{}) string {
 	}
 	return string(d)
 }
+
+func SprintPlain(v interface{}) string {
+	d, err := json.Marshal(v)
+	if err != nil {
+		fmt.Println(err)
+		return err.Error()
+	}
+	return string(d)
+}
