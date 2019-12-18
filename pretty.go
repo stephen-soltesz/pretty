@@ -5,23 +5,15 @@ import (
 	"fmt"
 )
 
+// Print formats v and writes to stdout.
 func Print(v interface{}) (int, error) {
 	return fmt.Println(Sprint(v))
 }
 
+// Sprint formats v and returns a string.
 func Sprint(v interface{}) string {
 	d, err := json.MarshalIndent(v, "", "    ")
 	if err != nil {
-		fmt.Println(err)
-		return err.Error()
-	}
-	return string(d)
-}
-
-func SprintPlain(v interface{}) string {
-	d, err := json.Marshal(v)
-	if err != nil {
-		fmt.Println(err)
 		return err.Error()
 	}
 	return string(d)
